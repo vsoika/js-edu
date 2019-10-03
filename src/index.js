@@ -9,6 +9,14 @@ module.exports = function getTimeForEducation(
     knowsProgramming = true,
     config = {family: 4}
     ) {
-      return 0;
+      let amountOfHoursToMaster;
+      
+      if (knowsProgramming === true) {
+      amountOfHoursToMaster = 800;
+      } else {
+        amountOfHoursToMaster = 1300;
+      }
+      let amountOfWeeks = Math.ceil(amountOfHoursToMaster/config[focus]);
+      return amountOfWeeks;
   };
   
